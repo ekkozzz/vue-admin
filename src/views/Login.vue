@@ -67,6 +67,7 @@ export default {
         if (!valid) return
         const { data: res } = await this.$http.post('login', this.form)
         console.log(res)
+        sessionStorage.setItem('token', res.data.token)
         this.$message.success(res.meta.msg)
         this.$router.push('home')
       })
