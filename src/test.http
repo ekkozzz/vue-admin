@@ -1,0 +1,9 @@
+@basrUrl = 'https://lianghj.top:8888/api/private/v1/'
+
+###
+GET {{basrUrl}}}}users
+{
+  "query": "",
+  "pagenum": 1,
+  "pagesize": 5,
+}
