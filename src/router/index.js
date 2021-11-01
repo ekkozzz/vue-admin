@@ -26,6 +26,12 @@ const routes = [
         component: () => import('../views/user/User.vue'),
         meta: { title: '用户列表' },
       },
+      {
+        path: '/roles',
+        name: 'roles',
+        component: () => import('../views/roles/Roles.vue'),
+        meta: { title: '角色列表' },
+      },
     ],
   },
   {

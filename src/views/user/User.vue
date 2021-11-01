@@ -7,7 +7,7 @@
         @clear="getUserList"
         clearable
       >
-        <template slot="append">
+        <template #append>
           <el-button
             type="primary"
             size="mini"
