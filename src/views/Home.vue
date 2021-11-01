@@ -47,6 +47,11 @@
             <i class="el-icon-s-fold" v-show="!isCollapse"></i>
           </div>
           <Breadcrumb />
+          <div>
+            <el-button type="primary" size="small" @click="logout"
+              >退出登录</el-button
+            >
+          </div>
         </el-header>
 
         <el-main style="overflow-x: hidden">
@@ -88,6 +93,10 @@ export default {
       this.menuList = res.data
       sessionStorage.setItem('menulist', JSON.stringify(res.data))
     },
+    logout() {
+      sessionStorage.removeItem('token')
+      this.$router.push('/login')
+    },
   },
 }
 </script>
@@ -112,7 +121,7 @@ export default {
     height: 50px !important;
     background: #fff;
     box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
-    padding-left: 0;
+    padding-right: 30px;
     .btn {
       width: 50px;
       height: 50px;
