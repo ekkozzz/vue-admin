@@ -32,6 +32,12 @@ const routes = [
         component: () => import('../views/roles/Roles.vue'),
         meta: { title: '角色列表' },
       },
+      {
+        path: '/rights',
+        name: 'rights',
+        component: () => import('../views/roles/Rigthts.vue'),
+        meta: { title: '权限列表' },
+      },
     ],
   },
   {

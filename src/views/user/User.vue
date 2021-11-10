@@ -115,7 +115,12 @@
         <el-button type="primary" @click="addUser" v-else>确 定</el-button>
       </span>
     </el-dialog>
-    <el-dialog title="分配角色" :visible.sync="dialogVisible2" width="50%">
+    <el-dialog
+      title="分配角色"
+      :visible.sync="dialogVisible2"
+      width="50%"
+      @close="handleClose2"
+    >
       <p>当前用户：{{ userInfo.username }}</p>
       <p>
         <span>当前角色：</span>
@@ -315,8 +320,12 @@ export default {
         }
       )
       console.log(res)
-      this.resetForm()
+      this.dialogVisible2 = false
       this.getUserList()
+    },
+    handleClose2() {
+      this.userInfo = {}
+      this.selectRoleId = ''
     },
   },
 }
