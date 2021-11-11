@@ -38,6 +38,12 @@ const routes = [
         component: () => import('../views/roles/Rigthts.vue'),
         meta: { title: '权限列表' },
       },
+      {
+        path: '/categories',
+        name: 'categories',
+        component: () => import('../views/goods/Cate.vue'),
+        meta: { title: '商品分类' },
+      },
     ],
   },
   {
