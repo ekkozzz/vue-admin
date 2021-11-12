@@ -44,6 +44,12 @@ const routes = [
         component: () => import('../views/goods/Cate.vue'),
         meta: { title: '商品分类' },
       },
+      {
+        path: '/params',
+        name: 'params',
+        component: () => import('../views/goods/Params.vue'),
+        meta: { title: '商品属性' },
+      },
     ],
   },
   {

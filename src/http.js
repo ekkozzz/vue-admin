@@ -33,7 +33,9 @@ http.interceptors.response.use(
       response.data.meta.status === 201 ||
       response.data.meta.status === 204
     ) {
-      Vue.prototype.$message.success(response.data.meta.msg)
+      if (response.data.meta.msg.indexOf('获取') === -1) {
+        Vue.prototype.$message.success(response.data.meta.msg)
+      }
     }
     return response
   },
